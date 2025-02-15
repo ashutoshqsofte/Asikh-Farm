@@ -1,45 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Clients from "../components/Clients";
-import Services from "./Services";
-import { useNavigate } from "react-router-dom";
+import './Home.css';
 
-import {
-  Heading,
-  HeroSection,
-  CallToActionButton,
-  PageContainer,
-  Subheading,
-  Paragraph,
-  StickyFooter,
-  Spacer,
-} from "../GlobalStyle.js";
-
-function Home() {
-  const navigate = useNavigate();
+const Home = () => {
   return (
     <>
-      <HeroSection>
-        <Heading>Your Technology Partner</Heading>
-      </HeroSection>
-      <PageContainer>
-        <Subheading>Innovate. Elevate. Excel.</Subheading>
-        <Paragraph>
-          Dive into a partnership with Qsofte, where passion meets precision and
-          diversity drives innovation. Tailored expertise for unmatched
-          efficiency and breakthrough growth. Your goals, our mission. Together,
-          we don’t just reach targets—we set new benchmarks.
-        </Paragraph>
-        <Spacer></Spacer>
-        <CallToActionButton onClick={() => navigate("/Connect")}>
-          Let's Connect
-        </CallToActionButton>
-        <StickyFooter>
-          <Clients></Clients>
-        </StickyFooter>
-      </PageContainer>
+    <div className="Home-para">
+      <h1 className="Heading-fst">Asikh Farm</h1>
+      <p className="para-fst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <button className="btn-fst">Know More</button>
+    </div>
+
+    <div className="Home-scd">
+          <div className="Home-scdpara">
+            <h1>Organic.Fresh.Eco-friendly</h1>
+            <p>From our farm to your home</p>
+          </div>
+          <div className="img-para-hm">
+          <div className="img-scd"></div>
+          <div className="para-snd"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt neque perspiciatis dolore laudantium officiis doloremque sint ipsam voluptatum velit? Quia laudantium eum laboriosam necessitatibus, aliquid repellendus pariatur voluptatum iste voluptate.ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+          </div>
+
+          <div className="img-para-hm-scd">
+
+          <div className="para-snd-scd"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt neque perspiciatis dolore laudantium officiis doloremque sint ipsam voluptatum velit? Quia laudantium eum laboriosam necessitatibus, aliquid repellendus pariatur voluptatum iste voluptate.ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+          <div className="img-scd-snd"></div>
+          
+          </div>
+    </div>
     </>
   );
-}
+};
 
 export default Home;

@@ -1,29 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./GlobalStyle";
-import theme from "./theme";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import Connect from "./pages/Connect";
+import Header from "./Components/Header"; // Correct casing for Header
+import Home from "./Pages/Home";         // Correct casing for Home
+import Products from "./Pages/Products"; // Correct casing for Products
+import About from "./Pages/About";       // Correct casing for About
+import Contact from "./Pages/Contact";   // Correct casing for Contact
+import Footer from "./Components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/Connect" element={<Connect />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
