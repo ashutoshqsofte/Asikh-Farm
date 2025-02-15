@@ -79,3 +79,155 @@
   border-radius: 50%;
   margin-left: 5%;
 }
+
+.Home-para {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.296), rgba(0, 0, 0, 0.263)), url("../images/3rd-Home-main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Heading-fst {
+  color: white;
+  font-size: 2.5rem; 
+  text-align: center;
+}
+
+.para-fst {
+  color: aliceblue;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.btn-fst {
+  height: 49px;
+  background-color: #EAC66E;
+  width: 153px;
+  border-radius: 15px;
+  border: none;
+}
+
+
+/* Mobile-specific image for the first section */
+
+@media screen and (max-width: 768px) {
+  .Home-para {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.377), rgba(0, 0, 0, 0.41)), url("../images/mobileasikhfarm.png");
+  }
+
+  .para-fst {
+    width: 90%; 
+    padding-bottom: 5%;
+  }
+}
+
+/* Second Section (Home-scd) */
+.Home-scd {
+  height: auto;
+  padding: 2rem 1rem;
+}
+
+.Home-scdpara {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.img-para-hm,
+.img-para-hm-scd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%; /* Standard spacing between image and text */
+}
+
+.img-scd {
+  background: url("../images/1st-imag-body.png");
+  background-size: cover;
+  background-position: center;
+  height: 352px;
+  width: 352px;
+  border-radius: 50%;
+}
+
+.img-scd-snd {
+  background: url("../images/2nd-img-body.png");
+  background-size: cover;
+  background-position: center;
+  height: 352px;
+  width: 352px;
+  border-radius: 50%;
+}
+
+/* Text Styling */
+.para-snd,
+.para-snd-scd {
+  width: 40%;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styling for Second Section */
+@media screen and (max-width: 768px) {
+  /* Apply Grid for Mobile */
+  .img-para-hm,
+  .img-para-hm-scd {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for text and image */
+    gap: 1rem; /* Standard spacing between columns */
+    align-items: center;
+  }
+
+  /* Image Styling */
+  .img-scd,
+  .img-scd-snd {
+    height: 200px; /* Smaller height for mobile */
+    width: 200px; /* Smaller width for mobile */
+    border-radius: 50%;
+    margin: 0 auto; /* Center images horizontally */
+  }
+
+  /* Text Styling */
+  .para-snd,
+  .para-snd-scd {
+    width: 90%; /* Make text responsive */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    line-height: 1.4;
+    text-align: left; /* Keep text left-aligned */
+  }
+
+  /* Reverse Image and Text Position for Mobile Screens */
+  .img-para-hm {
+    grid-template-areas: 
+      "image text"; /* First grid: Image on the left, text on the right */
+  }
+
+  .img-para-hm-scd {
+    grid-template-areas: 
+      "text image"; /* Second grid: Text on the left, image on the right */
+  }
+
+  .para-snd {
+    grid-area: text;
+  }
+
+  .img-scd {
+    grid-area: image;
+  }
+
+  .para-snd-scd {
+    grid-area: text;
+  }
+
+  .img-scd-snd {
+    grid-area: image;
+  }
+}
+
+  

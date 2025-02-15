@@ -1,0 +1,25 @@
+/* Mobile styles for: Header*/
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    color: #a4baad;
+  }
+}

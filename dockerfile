@@ -5,7 +5,7 @@
 FROM  node:20-alpine
 
 # Set the working directory in the container
-WORKDIR /qsofte
+WORKDIR /AsikhFarm
 
 # Copy the package.json and package-lock.json files to the working directory
 COPY package*.json ./
@@ -26,4 +26,4 @@ RUN npm run build
 EXPOSE 5000
 
 # Serve the app using `serve`. Adjust the port to match the EXPOSE command above
-CMD ["serve", "-s", "/qsofte/build", "-l", "5000"]
+CMD ["serve", "-s", "build", "-l", "5000"]
